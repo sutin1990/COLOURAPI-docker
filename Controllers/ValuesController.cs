@@ -29,7 +29,7 @@ namespace ColourAPI.Controllers
         [HttpGet("{id}")]
         public ActionResult<List<Employees>> Get(int id)
         {
-            var result = _demoContext.Employees.Where(w => w.Id != id).ToList();
+            var result = _demoContext.Employees.Where(w => w.Id == id).ToList();
             return result;
         }
 
